@@ -13,7 +13,22 @@ namespace URI
     }
     
 
+    bool URI::parseString(const std::string &uriString)
+    {
+        return false; 
+    }
+    std::string URI::getHost() const 
+    {
+        return ""; 
+    } 
+    std::string URI::getScheme() const
+    {
+        return ""; 
 
-
+    }
+    std::vector<std::string> URI::getPath() const
+    {
+        return {}; 
+    }
 
 }

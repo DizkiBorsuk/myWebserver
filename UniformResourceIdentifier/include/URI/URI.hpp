@@ -1,5 +1,7 @@
 #pragma once 
 #include <memory>
+#include <string> 
+#include <vector>
 
 namespace URI
 {
@@ -14,6 +16,11 @@ namespace URI
         URI& operator=(const URI&) = delete; 
         URI& operator=(const URI&&) = delete; 
 
+        // methods 
+        bool parseString(const std::string &uriString); 
+        std::string getHost() const; // method only returns string, it won't change anything co use const 
+        std::string getScheme() const;
+        std::vector<std::string> getPath() const;
 
     private: 
         // pointer to implementation patern 
